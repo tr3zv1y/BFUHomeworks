@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/first_program.cpp 
+../src/byteOperations.cpp \
+../src/calculateAreaCircle.cpp 
 
 CPP_DEPS += \
-./src/first_program.d 
+./src/byteOperations.d \
+./src/calculateAreaCircle.d 
 
 OBJS += \
-./src/first_program.o 
+./src/byteOperations.o \
+./src/calculateAreaCircle.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -25,7 +28,7 @@ src/%.o: ../src/%.cpp src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/first_program.d ./src/first_program.o
+	-$(RM) ./src/byteOperations.d ./src/byteOperations.o ./src/calculateAreaCircle.d ./src/calculateAreaCircle.o
 
 .PHONY: clean-src
 

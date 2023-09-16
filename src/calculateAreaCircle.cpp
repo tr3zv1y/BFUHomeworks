@@ -7,12 +7,14 @@
 //============================================================================
 
 #include <iostream>
-using namespace std;
+# define M_PI
+#include <cmath>
+#include <iomanip>
 
-int main()
+int mai()
 {
-
-	cout << "It was strange\n";
-
+	double R;
+	std::cin >> R;
+	std::cout << std::setprecision(15) << M_PI * R * R;
 	return 0;
 }
